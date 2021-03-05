@@ -9,8 +9,8 @@ const jwtHelper = new JwtHelperService();
   providedIn: 'root'
 })
 
-export class AuthService {    
-  
+export class AuthService {
+
   token: any;
   user: any;
 
@@ -19,17 +19,17 @@ export class AuthService {
   registerUser(user) {
     const myHeaders = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post(
-      '/account/reg', 
-      user, 
-      {headers:myHeaders}).pipe(map((response: any) => response)); 
+      'http://localhost:3000/account/reg',
+      user,
+      {headers:myHeaders}).pipe(map((response: any) => response));
   }
 
   authUser(user) {
     const myHeaders = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post(
-      '/account/auth', 
-      user, 
-      {headers:myHeaders}).pipe(map((response: any) => response)); 
+      'http://localhost:3000/account/auth',
+      user,
+      {headers:myHeaders}).pipe(map((response: any) => response));
   }
 
   storeUser(token, user) {

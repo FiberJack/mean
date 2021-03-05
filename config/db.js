@@ -1,4 +1,4 @@
 module.exports = {
-    db: 'mongodb+srv://dimanskr:<PASSWORD>@cluster0.wpift.mongodb.net/test?retryWrites=true&w=majority',
-    secret: 'some_itproger'
+    db: 'mongodb://localhost:27017/website',
+    secret: 'mJD9GNS7A!{wdTen#P}wlb-touu'
 }
