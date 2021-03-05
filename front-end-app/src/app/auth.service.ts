@@ -19,7 +19,7 @@ export class AuthService {
   registerUser(user) {
     const myHeaders = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post(
-      'http://localhost:3000/account/reg',
+      'http://localhost:8080/account/reg',
       user,
       {headers:myHeaders}).pipe(map((response: any) => response));
   }
@@ -27,7 +27,7 @@ export class AuthService {
   authUser(user) {
     const myHeaders = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post(
-      'http://localhost:3000/account/auth',
+      'http://localhost:8080/account/auth',
       user,
       {headers:myHeaders}).pipe(map((response: any) => response));
   }
